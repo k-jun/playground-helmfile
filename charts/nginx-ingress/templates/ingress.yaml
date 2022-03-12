@@ -1,0 +1,9 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.nginxIngress.name }}
+spec:
+  {{- if ne .Values.nginxIngress.name "" }}
+  ingressClassName: {{ .Values.nginxIngressController.controller }}
+  {{- end }}
+  rules: {{ toYaml .Values.nginxIngress.rules | nindent 2 }}

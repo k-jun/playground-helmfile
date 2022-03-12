@@ -1,0 +1,26 @@
+nginxIngressController:
+  controller:
+    ingressClassResource:
+      name: nginx
+      controllerValue: "k8s.io/nginx"
+    metrics:
+      enabled: true
+      serviceMonitor:
+        enabled: true
+      service:
+        annotations:
+          prometheus.io/scrape: "true"
+          prometheus.io/port: "10254"
+nginxIngress:
+  name: nginx-ingress
+  rules:
+  - host: "example.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: test
+            port:
+              number: 80
