@@ -1,16 +1,8 @@
 nginxIngressController:
   controller:
     ingressClassResource:
-      name: nginx
-      controllerValue: "k8s.io/nginx"
-    metrics:
-      enabled: true
-      serviceMonitor:
-        enabled: true
-      service:
-        annotations:
-          prometheus.io/scrape: "true"
-          prometheus.io/port: "10254"
+      name: nginx2
+      controllerValue: "k8s.io/nginx2"
 nginxIngress:
   name: nginx-ingress
   rules:

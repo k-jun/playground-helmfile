@@ -1,13 +1,6 @@
 environments:
-  dev:
-    values:
-    - vars/dev.yaml
-  prod:
 
 releases:
-- name: nginx-ingress
-  namespace: nginx-ingress
-  # values:
-  # - vars/nginx-ingress.yaml
-  chart: charts/nginx-ingress
-  version: "4.0.17"
+- name: helloworld
+  namespace: helloworld
+  chart: charts/helloworld
