@@ -9,6 +9,7 @@ spec:
   - name: debian 
     image: debian
     command: ["/bin/sh"]
-    args: ["-c", "sleep 3600"]
+    args: ["-c", "echo", "{{ .Values.name }}"]
   terminationGracePeriodSeconds: 60
+
 

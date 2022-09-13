@@ -1,6 +1,10 @@
 environments:
+  dev:
+  prod:
 
 releases:
 - name: helloworld
   namespace: helloworld
   chart: charts/helloworld
+  values:
+  - vars/{{ .Environment.Name }}.yaml
