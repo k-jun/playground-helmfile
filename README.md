@@ -4,5 +4,6 @@
 
 ```sh
 $ helmfile -e dev template
-$ helmfile -e prod template
+$ make generate_yaml
+$ helmfile -e dev template
 ```

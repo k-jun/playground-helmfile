@@ -3,8 +3,8 @@ environments:
   prod:
 
 releases:
-- name: helloworld
-  namespace: helloworld
-  chart: charts/helloworld
+- name: sealedsecret
+  namespace: sealedsecret
+  chart: charts/sealedsecret
   values:
   - vars/{{ .Environment.Name }}.yaml
